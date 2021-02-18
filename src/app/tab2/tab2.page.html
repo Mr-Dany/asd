@@ -1,0 +1,67 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="text-decoration: solid; text-align: center;">
+    <ion-title >
+      <b>Registrarse</b>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Registrarse</ion-title>
+    </ion-toolbar>
+  </ion-header>
+    <form onsubmit="processForm(event)">
+      <ion-list lines="full" class="ion-no-margin ion-no-padding">
+        <ion-item>
+          <ion-label position="stacked">Nombre<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required type="text" oninput="handleFirstNameValue(event)"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Apellidos<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required type="text" oninput="handleLastNameValue(event)"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Nombre de Usuario<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required type="text" oninput="handleFirstNameValue(event)"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Correo Electronico<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required type="email" oninput="handleLastNameValue(event)"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Verificar Correo Electronico<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required type="text" oninput="handleLastNameValue(event)"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Contraseña<ion-text color="danger">*</ion-text></ion-label>
+          <ion-input required type="password" oninput="handleLastNameValue(event)"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Direccion</ion-label>
+          <br>
+          <ion-input placeholder="Address"></ion-input>
+          <ion-input placeholder="City"></ion-input>
+          <ion-input placeholder="State"></ion-input>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label>Fecha de Nacimiento</ion-label>
+          <ion-datetime value="1990-02-20" placeholder="Select Date"></ion-datetime>
+        </ion-item>
+      </ion-list>
+
+      <div class="ion-padding">
+        <ion-button expand="block" type="submit" class="ion-no-margin">Crear cuenta</ion-button>
+      </div>
+    </form>
+    <!-- {<app-explore-container name="Tab 1 page"></app-explore-container>} -->
+</ion-content>
+
+

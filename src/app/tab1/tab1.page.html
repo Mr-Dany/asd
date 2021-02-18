@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/tab2"></ion-back-button>
+      <ion-title >
+        My Space
+      </ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">My Space</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card-content>
+ <!-- <h1>{{nombre}}</h1>
+  <div *ngFor="let item of personaejemplo">
+    {{item.nombre}}
+    {{item.apellido}}
+  </div> -->
+  <ion-button color="dark" (click)="presentActionSheet()">Mostrar</ion-button>
+  <h1 style="text-align: center;">Listado de Posts</h1>
+ 
+
+  <table>
+    <tr>
+      <td><strong>postId</strong></td>
+      <td><strong>Id</strong></td>
+      <td><strong>name</strong></td>
+      <td><strong>email</strong></td>
+      <td><strong>Cuerpo</strong></td>
+    </tr>
+    <tr *ngFor="let item of posts" >
+      <td>{{item.postId}}</td>
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.body}}</td>
+    </tr>
+  </table>
+
+    <table>
+      <tr>
+        <td><strong>userId</strong></td>
+        <td><strong>Id</strong></td>
+        <td><strong>Titulo</strong></td>
+        <td><strong>Cuerpo</strong></td>
+      </tr>
+      <tr *ngFor="let item of comments" >
+        <td>{{item.userId}}</td>
+        <td>{{item.id}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.body}}</td>
+      </tr>
+    </table>
+
+  
+  <table>
+    <tr>
+      <td><strong>Id</strong></td>
+      <td><strong>name</strong></td>
+      <td><strong>apellido</strong></td>
+      <td><strong>cedula</strong></td>
+    </tr>
+    <tr *ngFor="let item of persona" >
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.apellido}}</td>
+      <td>{{item.cedula}}</td>
+    </tr>
+  </table>
+
+   
+  </ion-card-content>
+</ion-content>
+<div class="ion-padding">
+  <ion-button expand="block" type="submit" class="ion-no-margin">Siguiente</ion-button>
+</div>
